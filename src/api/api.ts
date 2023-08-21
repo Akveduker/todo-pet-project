@@ -6,8 +6,9 @@ import { createRequestBody } from "utils/helpers/api/createRequestBody";
 
 class Api {
     static url = 'http://localhost:3001/api';
-    authEndpoint = (data: AuthDataReq) => (createRequestBody({ url: `${Api.url}/auth`, data }, 'post'))
-    regEndpoint = (data: RegDataReq) => (createRequestBody({ url: `${Api.url}/reg`, data }, 'post'))
+    authEndpoint = (data: AuthDataReq) => (createRequestBody({ url: `${Api.url}/auth`, data }, 'post', false))
+    regEndpoint = (data: RegDataReq) => (createRequestBody({ url: `${Api.url}/reg`, data }, 'post', false))
+    getUserEndpoint = () => (createRequestBody({ url: `${Api.url}/user`, data: {} }))
     userPatchEndpoint = (data: UserDataReq) => (createRequestBody({ url: `${Api.url}/user`, data }, 'patch'))
     groupCreateEndpoint = (data: GroupCreateDataReq) => (createRequestBody({ url: `${Api.url}/group/create`, data }, 'post'))
     groupDeleteEndpoint = (data: GroupDeleteDataReq) => (createRequestBody({ url: `${Api.url}/group/delete`, data }, 'delete'))
@@ -35,5 +36,6 @@ export const { authEndpoint,
     deleteTaskEndpoint,
     editTaskEndpoint,
     deleteTaskGroupEndpoint,
-    getUsersBaseInfoEndpoint
+    getUsersBaseInfoEndpoint,
+    getUserEndpoint
 } = myApi
