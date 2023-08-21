@@ -4,6 +4,7 @@ import { UserInitialState } from "./types";
 import { storeNames } from "utils/constants/storeNames/storeNames";
 import { User } from "types/user/user";
 import { FormatedGroup } from 'types/groups/groups';
+import Cookies from 'js-cookie';
 const initialState: UserInitialState = {
     userColor: {
         background: '',
@@ -22,17 +23,13 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         setUser: (state, { payload }: { payload: User }) => {
-            localStorage.setItem(storageNames.user, JSON.stringify({
-                email: payload.email,
-                password: payload.password
-            }))
             return {
                 isLogged: true,
                 ...payload,
             }
         },
         logOutUser: () => {
-            localStorage.removeItem(storageNames.user)
+            Cookies.remove(storageNames.token)
             return initialState;
         },
         setGroups: (state, { payload }: { payload: FormatedGroup[] }) => {
