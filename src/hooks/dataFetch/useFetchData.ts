@@ -14,9 +14,7 @@ export const useFetchData = <T>() => {
             })
             const response = await Axios({
                 ...axiosBody,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+
             })
             setDataFetchState({
                 fetchStatus: VAL_SUCCESS,
