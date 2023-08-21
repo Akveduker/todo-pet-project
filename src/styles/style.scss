@@ -1,0 +1,110 @@
+@import "normalize";
+@import "vars";
+@import "mixins";
+
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 15px;
+    @include fontRegular;
+    color: $C1A;
+    height: 100%;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+input {
+    outline: none;
+    border: 1px solid $C1A;
+    @include fontRegular;
+    font-size: 14px;
+}
+button {
+    background-color: transparent;
+    border: none;
+    display: block;
+    @include fontRegular;
+    padding: 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+h1 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+h2 {
+    @include fontSemibold;
+    font-size: 22px;
+}
+h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    @include fontMedium;
+}
+h4 {
+    font-size: 15px;
+    line-height: 1.2;
+    @include fontMedium;
+}
+h5 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+h6 {
+    font-size: 20px;
+    line-height: 1.4;
+}
+@media (max-width: 550px) {
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+}
+.form-react-select-container {
+    .form-react-select {
+        &__control {
+            @include formInput;
+            padding: 0;
+            height: 41px;
+        }
+        &__menu {
+            background-color: $C1H;
+            border-radius: $borderRadius;
+            overflow: hidden;
+        }
+    }
+}

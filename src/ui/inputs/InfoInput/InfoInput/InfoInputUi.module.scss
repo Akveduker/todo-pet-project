@@ -1,0 +1,14 @@
+@import "styles/_vars.scss";
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $C1A;
+    padding: 5px 5px 5px 0;
+    font-size: 16px;
+    &:focus {
+        border-color: $C5B;
+    }
+    &:disabled {
+        background: none;
+    }
+}

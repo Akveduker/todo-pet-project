@@ -1,0 +1,9 @@
+.item {
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &--small {
+        padding-right: 14px;
+    }
+}

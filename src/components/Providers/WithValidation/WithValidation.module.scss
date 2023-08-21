@@ -1,0 +1,32 @@
+@import "@styles/_vars.scss";
+@import "@styles/_mixins.scss";
+.container {
+    display: block;
+    width: 100%;
+}
+.input {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+.icon {
+    position: absolute;
+    &--mid {
+        top: 0;
+        bottom: 0;
+        right: 5px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+    &--start {
+        top: 5px;
+        right: 5px;
+    }
+}
+.error {
+    font-size: 12px;
+    @include fontSemibold;
+    color: $C6A;
+    margin-top: 5px;
+}

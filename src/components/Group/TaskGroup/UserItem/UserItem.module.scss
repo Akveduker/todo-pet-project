@@ -1,0 +1,15 @@
+@import "styles/_vars.scss";
+.item {
+    padding: 5px;
+    display: block;
+    background-color: $C1E;
+    border-radius: 5px;
+    max-width: 200px;
+}
+.info {
+    display: flex;
+    align-items: center;
+}
+.name {
+    margin-left: 20px;
+}

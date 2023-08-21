@@ -1,0 +1,24 @@
+@import "styles/_vars.scss";
+.container {
+    padding: 12px;
+    // &:hover {
+    //     background-color: $C1D;
+    // }
+}
+.list {
+    list-style-type: none;
+
+    &__item {
+        margin-top: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+.logout-button {
+    margin-top: 20px;
+    background-color: $C6A;
+    &:hover {
+        background-color: darken($C6A, 20);
+    }
+}

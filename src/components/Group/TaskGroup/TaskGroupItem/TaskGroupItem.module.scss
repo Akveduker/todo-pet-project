@@ -1,0 +1,62 @@
+@import "styles/_vars.scss";
+
+.group {
+    position: relative;
+    cursor: pointer;
+    vertical-align: top;
+    &__item {
+        padding: 10px 0 10px 10px;
+        border-right: 1.5px solid $C1C;
+        &:last-child {
+            border: none;
+        }
+    }
+    &:hover {
+        .group__item {
+            border-width: 1.8px;
+            border-color: $C2A;
+        }
+        .fake-div {
+            &::after,
+            &::before {
+                content: "";
+                background-color: $C2A;
+                z-index: 2;
+            }
+            &::after {
+                top: -1.8px;
+                height: 1.8px;
+            }
+        }
+        background: radial-gradient(50% 50% at 50% 50%, rgba(106, 152, 60, 0) 0%, rgba(106, 152, 60, 0.08) 88.02%);
+    }
+}
+.fake-div {
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1.5px;
+        left: 0;
+        background-color: $C1C;
+    }
+    &::after {
+        content: "";
+        top: -1.5px;
+    }
+    &::before {
+        content: "";
+        bottom: 0;
+    }
+}
+
+.people {
+    &__item {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import "styles/_vars.scss";
+@import "styles/_mixins.scss";
+.bg {
+    position: absolute;
+    width: 40px;
+    height: 9px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tasksFigureColors;
+}
+.container {
+    box-sizing: content-box;
+    z-index: -1;
+    width: 40px;
+    height: 9px;
+    position: absolute;
+    right: -11px;
+    top: 4px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4.5px;
+    transition: top 500ms;
+    cursor: pointer;
+    padding: 10px;
+    &-enter {
+        &-active {
+            transition: top 700ms;
+            top: -19px;
+        }
+        &-done {
+            z-index: 1;
+            top: -19px;
+        }
+    }
+}
+.point {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $C1J;
+    margin-right: 2px;
+    margin: 2px 0 0 2px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.modal {
+    padding: 6px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

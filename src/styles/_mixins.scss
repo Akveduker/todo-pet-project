@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import "./vars";
+@mixin fontBold {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+@mixin fontSemibold {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+@mixin fontMedium {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+@mixin fontRegular {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+@mixin inputStyles {
+    border-radius: $borderRadius;
+    background-color: $C1H;
+    border: 1px solid $C1D;
+    width: 100%;
+    padding: 11px 21px;
+    font-size: 14px;
+    &::placeholder {
+        color: $C1C;
+    }
+}
+@mixin formInput {
+    @include inputStyles;
+    padding: 10px 30px 10px 10px;
+}
+@mixin inputBorderColors {
+    &--error {
+        border-color: $C6A !important;
+    }
+    &--success {
+        border-color: $C6B !important;
+    }
+}
+@mixin tasksBorderColors {
+    &--done {
+        border-color: $C8B;
+        &:hover {
+            border-color: $C8B;
+        }
+    }
+    &--in-progress {
+        border-color: $C8A;
+        &:hover {
+            border-color: $C8D;
+        }
+    }
+    &--not-started {
+        border-color: $C8C;
+        &:hover {
+            border-color: $C8B;
+        }
+    }
+}
+@mixin tasksBackgroundColors {
+    &--done {
+        background-color: $C8B;
+        &:hover {
+            background-color: $C8E;
+        }
+    }
+    &--in-progress {
+        background-color: $C8D;
+        &:hover {
+            background-color: $C8A;
+        }
+    }
+    &--not-started {
+        background-color: $C8C;
+        &:hover {
+            background-color: $C8F;
+        }
+    }
+}
+
+@mixin tasksFigureColors {
+    &--done {
+        svg {
+            path {
+                fill: $C8B;
+            }
+        }
+    }
+    &--in-progress {
+        svg {
+            path {
+                fill: $C8A;
+            }
+        }
+    }
+
+    &--not-started {
+        svg {
+            path {
+                fill: $C8C;
+            }
+        }
+    }
+}

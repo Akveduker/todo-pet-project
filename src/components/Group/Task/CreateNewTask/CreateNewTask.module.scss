@@ -1,0 +1,28 @@
+@import "styles/_vars.scss";
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.title {
+    margin-bottom: 20px;
+}
+.item {
+    margin: 10px 0;
+}
+.button {
+    margin-top: 10px;
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+
+.create-task {
+    width: 100%;
+    padding: 17px;
+    border-radius: 12px;
+    background-color: $C7D;
+    transition: $buttonTranstion;
+    &:hover {
+        background-color: $C7E;
+    }
+}

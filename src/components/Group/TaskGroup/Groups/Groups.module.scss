@@ -1,0 +1,21 @@
+@import "styles/_vars.scss";
+.container {
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+}
+.header {
+    color: $C1C;
+    border: 1.5px solid $C1C;
+    border-width: 1.5px 0 0 0;
+}
+.block {
+    width: 25%;
+    border: 1.5px solid $C1C;
+    border-width: 0 1.5px 0 0;
+    padding: 10px 0 10px 10px;
+    &:last-child {
+        border: none;
+    }
+}

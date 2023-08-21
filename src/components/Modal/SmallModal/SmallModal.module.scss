@@ -1,0 +1,15 @@
+@import "styles/_vars.scss";
+.container {
+    z-index: 10;
+    overflow: auto;
+}
+.body {
+    position: relative;
+    background-color: $C1J;
+    // padding: 5px;
+    border: 1px solid rgba(149, 149, 149, 0.8);
+    border-radius: 3px;
+    overflow: auto;
+    position: absolute;
+    margin: auto;
+}

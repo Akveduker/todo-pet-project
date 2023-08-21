@@ -1,0 +1,33 @@
+@import "styles/_vars.scss";
+.item {
+    width: 100%;
+    min-height: 20px;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: $C1J;
+    border: 1px solid $C1E;
+}
+.name {
+    margin-bottom: 10px;
+}
+.role {
+    color: $C1J;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-block;
+    &--admin {
+        background-color: $C3B;
+    }
+    &--user {
+        background-color: $C4A;
+    }
+}
+.id {
+    margin-bottom: 10px;
+}
+.link {
+    margin-top: 15px;
+}

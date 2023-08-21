@@ -1,0 +1,19 @@
+@import "styles/_mixins.scss";
+.button {
+    text-align: center;
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $buttonTranstion;
+    line-height: 7px;
+    &:hover {
+        background-color: $C7F;
+    }
+
+    svg {
+        margin-right: 4px;
+    }
+}

@@ -1,0 +1,1 @@
+export const APP_DATE_FORMAT = 'dd/mm/yyyy'

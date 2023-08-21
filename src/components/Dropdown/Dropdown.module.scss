@@ -1,0 +1,7 @@
+@import "../../styles/_vars.scss";
+.container {
+    overflow: hidden;
+}
+.body {
+    transition: $dropDownTranstion;
+}

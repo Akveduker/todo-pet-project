@@ -1,0 +1,1 @@
+export type SwitchContextType = ((name: string) => void) | null

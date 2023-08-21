@@ -1,0 +1,30 @@
+@import "styles/_vars.scss";
+.button {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background-color: transparent;
+    color: $C1B;
+    font-size: 16px;
+    &:hover {
+        color: $C1A;
+        background-color: $C1D;
+    }
+}
+.delete {
+    max-width: 200px;
+    padding: 5px;
+    &__buttons {
+        margin-top: 10px;
+        width: 100%s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__button-yes {
+        background-color: $C6A;
+        &:hover {
+            background-color: darken($C6A, 20);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.item {
+    margin-top: 22px;
+    &--small {
+        margin-right: 15px;
+    }
+}
+.container {
+    margin-top: 2px;
+    max-width: 611px;
+    &--active {
+        max-width: 626px;
+    }
+}
+
+.button {
+    margin-top: 22px;
+}

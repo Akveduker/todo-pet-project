@@ -1,0 +1,27 @@
+@import "@styles/_vars.scss";
+.button {
+    background-color: $C2A;
+    border: none;
+    color: $C1J;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $buttonTranstion;
+    &:disabled {
+        background-color: $C1D;
+        &:hover {
+            background-color: $C1D;
+        }
+    }
+    &:hover {
+        background-color: $C2B;
+    }
+    &__normal {
+        padding: 5px 20px;
+    }
+    &__big {
+        width: 100%;
+    }
+    &__small {
+        padding: 1px 6px;
+    }
+}

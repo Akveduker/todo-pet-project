@@ -1,0 +1,25 @@
+@import "styles/_vars.scss";
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $C1A;
+    padding: 5px 5px 5px 0;
+    font-size: 16px;
+    &:focus {
+        border-color: $C5B;
+    }
+    &:disabled {
+        background: none;
+    }
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.title {
+    margin-right: 5px;
+}
+.success-message {
+    margin-top: 5px;
+    color: $C2A;
+}

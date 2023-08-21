@@ -1,0 +1,28 @@
+@import "styles/_vars.scss";
+.body {
+    transition: all 200ms;
+}
+.body {
+    z-index: 5;
+    overflow: hidden;
+    position: absolute;
+    width: 45%;
+    background-color: $C1J;
+    height: 100%;
+    right: -105%;
+    top: 0;
+    transition: right 200ms;
+    box-shadow: -11px 2px 14px -7px rgba(34, 60, 80, 0.2);
+    &-enter-active {
+        right: -105%;
+    }
+    &-enter-done {
+        right: 0;
+    }
+    &-exit-acitve {
+        right: 0;
+    }
+    &-exit-done {
+        right: -105%;
+    }
+}

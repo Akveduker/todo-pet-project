@@ -1,0 +1,13 @@
+@import "styles/_vars.scss";
+.button {
+    background-color: $C1J;
+    padding: 5px;
+    font-size: 10px;
+    color: $C1A;
+    &:hover {
+        background-color: darken($C1J, 20);
+    }
+}
+.container {
+    width: initial;
+}

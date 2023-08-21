@@ -1,0 +1,12 @@
+@import "styles/_vars.scss";
+.button {
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: $buttonTranstion;
+    color: $C2A;
+    cursor: pointer;
+    &:hover {
+        color: $C2B;
+    }
+}

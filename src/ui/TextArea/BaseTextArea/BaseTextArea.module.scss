@@ -1,0 +1,15 @@
+@import "styles/_vars.scss";
+.text-area {
+    resize: none;
+    width: 100%;
+    padding: 5px 29px 5px 5px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+    border-color: $C1B;
+    font-size: 15px;
+    &:focus {
+        outline: none;
+    }
+}

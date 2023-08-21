@@ -1,0 +1,13 @@
+@import "styles/_vars.scss";
+@import "styles/_mixins.scss";
+.status {
+    padding: 4px 14px;
+    border-radius: 12px;
+    display: inline-block;
+    color: $C1J;
+    text-align: center;
+    transition: $buttonTranstion;
+    @include tasksBackgroundColors;
+    color: $C7J;
+    line-height: 109%;
+}

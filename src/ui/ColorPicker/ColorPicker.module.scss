@@ -1,0 +1,33 @@
+@import "styles/_vars.scss";
+.container {
+    max-width: 200px;
+}
+
+.saturation {
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+.input-container {
+    margin: 10px 0;
+}
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        text-align: left;
+        max-width: 50px;
+        width: 100%;
+    }
+}
+.input {
+    display: block;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid $C1B;
+}
+
+.hue {
+    max-width: 200px;
+    width: 100%;
+}

@@ -1,0 +1,68 @@
+@import "styles/_vars.scss";
+.container {
+    padding-bottom: 32px;
+    position: relative;
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.5px;
+        position: absolute;
+        border-radius: 1px;
+        bottom: 0;
+        background-color: $C7C;
+    }
+    &::after {
+        left: 0;
+    }
+    &::before {
+        left: 100%;
+    }
+}
+
+.title {
+    margin-bottom: 32px;
+}
+
+.list {
+    font-size: 14px;
+    list-style-type: none;
+    color: $C7A;
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.item {
+    &__name {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        max-width: 100px;
+        margin-right: 42px;
+        svg {
+            margin-right: 8px;
+        }
+    }
+    &__content {
+        display: flex;
+    }
+}
+.user {
+    display: flex;
+    margin-right: 16px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &__name {
+        display: flex;
+        margin-left: 4px;
+        align-items: center;
+    }
+}

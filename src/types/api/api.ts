@@ -1,0 +1,1 @@
+export type ApiReqData<T> = (data: T) => { url: string, data: T }

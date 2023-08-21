@@ -1,0 +1,23 @@
+@import "styles/_vars.scss";
+.button {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid $C1A;
+    border-radius: 3px;
+    line-height: 12px;
+    transition: $buttonTranstion;
+    &__red {
+        color: $C7I;
+        border-color: $C7I;
+        &:hover {
+            background-color: $C7K;
+        }
+    }
+    &__gray {
+        border-color: $C7H;
+        color: $C7J;
+        &:hover {
+            background-color: $C7E;
+        }
+    }
+}
