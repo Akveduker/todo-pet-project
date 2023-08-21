@@ -17,12 +17,13 @@ import { User } from 'types/user/user';
 import BaseInputPassword from '@components/Ui/BaseInputPassword/BaseInputPassword';
 import { generateColorForUser } from 'utils/helpers/color/generateColorForUser';
 import { valObjectReg } from 'utils/constants/valObjects/valObjectReg';
+import { AuthReturnType } from 'types/auth/auth';
 
 const Registration = () => {
 
     const [validationState, dispatch] = useCreateValidationState(valObjectReg)
 
-    const [data, getData, setDataFetchState] = useFetchData<User>()
+    const [data, getData, setDataFetchState] = useFetchData<AuthReturnType>()
 
     useSetAuthState(data)
 

@@ -15,12 +15,13 @@ import { User } from 'types/user/user';
 import { useSetAuthState } from 'hooks/authorization/useSetAuthState';
 import BaseInputPassword from '@components/Ui/BaseInputPassword/BaseInputPassword';
 import { valObjectCreateAuth } from 'utils/constants/valObjects/valObjectCreateAuth';
+import { AuthReturnType } from 'types/auth/auth';
 
 const LogIn = () => {
 
     const [validationState, dispatch] = useCreateValidationState(valObjectCreateAuth)
 
-    const [data, getData, setDataFetchState] = useFetchData<User>()
+    const [data, getData, setDataFetchState] = useFetchData<AuthReturnType>()
 
     const { email, password, isValid } = validationState
 
