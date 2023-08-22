@@ -20,11 +20,10 @@ export interface TaskGroup extends MongoValues {
     tasks: string[];
 }
 
-export type GetTaskEndpoin = {
+export type GetTaskEndpoint = {
     tasksIdsArr: string[]
 }
 export type DeleteTaskEndpoint = {
-    userId: string;
     taskId: string;
     taskGroupId: string;
     groupId: string;
@@ -32,7 +31,6 @@ export type DeleteTaskEndpoint = {
 export type TaskForEdit = Partial<Omit<Task, '_id'>>
 
 export type EditTaskEndpoint = {
-    userId: string;
     taskId: string;
     taskGroupId: string;
     groupId: string;
@@ -42,5 +40,4 @@ export type EditTaskEndpoint = {
 export type CreateTaskEndpoint = {
     groupId: string;
     taskGroupId: string;
-    creatorId: string;
 } & Pick<Task, 'personsId' | 'taskDate' | 'taskStatus' | 'name'>

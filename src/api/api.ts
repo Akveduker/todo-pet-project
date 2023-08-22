@@ -1,6 +1,6 @@
 import { AuthDataReq, RegDataReq } from "types/auth/auth";
 import { CreateTaskGroupEndpoint, DeleteTaskGroupEndpoint, GroupConnectEndpoint, GroupCreateDataReq, GroupDeleteDataReq, GroupPageEndpoint } from "types/groups/groups";
-import { CreateTaskEndpoint, DeleteTaskEndpoint, EditTaskEndpoint, GetTaskEndpoin } from "types/task/task";
+import { CreateTaskEndpoint, DeleteTaskEndpoint, EditTaskEndpoint, GetTaskEndpoint } from "types/task/task";
 import { UserBaseInfoEnpoint, UserDataReq } from "types/user/user";
 import { createRequestBody } from "utils/helpers/api/createRequestBody";
 
@@ -17,7 +17,7 @@ class Api {
     createTaskGroupEndpoint = (data: CreateTaskGroupEndpoint) => (createRequestBody({ url: `${Api.url}/taskGroup/create`, data }, 'post'))
     deleteTaskGroupEndpoint = (data: DeleteTaskGroupEndpoint) => (createRequestBody({ url: `${Api.url}/taskGroup/delete`, data }, 'delete'))
     createTaskEndpoint = (data: CreateTaskEndpoint) => (createRequestBody({ url: `${Api.url}/task/create`, data }, 'post'))
-    getTaskListEndpoint = (data: GetTaskEndpoin) => (createRequestBody({ url: `${Api.url}/task/get`, data }, 'post'))
+    getTaskListEndpoint = (data: GetTaskEndpoint) => (createRequestBody({ url: `${Api.url}/task/get`, data }, 'post'))
     deleteTaskEndpoint = (data: DeleteTaskEndpoint) => (createRequestBody({ url: `${Api.url}/task/delete`, data }, 'delete'))
     editTaskEndpoint = (data: EditTaskEndpoint) => (createRequestBody({ url: `${Api.url}/task/edit`, data }, 'patch'))
     getUsersBaseInfoEndpoint = (data: UserBaseInfoEnpoint) => (createRequestBody({ url: `${Api.url}/user/baseInfo`, data }, 'post'))

@@ -41,13 +41,10 @@ export const useCreateNewTask = () => {
 
     const createTask = () => {
         const filteredUsers = usersListState.state.filter(item => item.isIn)
-
-        console.log(usersListState.state)
         const reqBody = createTaskEndpoint({
             name: name.value,
             taskDate: dateConvert(date.value),
             personsId: filteredUsers.length === 0 ? [creatorId] : filteredUsers.map(({ _id }) => _id),
-            creatorId,
             taskGroupId,
             groupId,
             taskStatus: TASK_STATUS_NOT_STARTED,
