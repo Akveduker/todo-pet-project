@@ -38,7 +38,6 @@ export const useConnectToGroup = () => {
         const requestBody = groupConnectEndpoint({
             groupId: id.value,
             password: password.value,
-            userId: _id,
         })
         getData(requestBody)
     }

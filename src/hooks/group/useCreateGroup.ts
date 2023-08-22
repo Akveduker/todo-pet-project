@@ -13,7 +13,7 @@ export const useCreateGroup = () => {
 
     const storeDispatch = useAppDispatch()
 
-    const { _id, groups } = useAppSelector(userSelector)
+    const { groups } = useAppSelector(userSelector)
 
 
     const [validationState, dispatch] = useCreateValidationState(valObjectCreateGroup)
@@ -28,7 +28,6 @@ export const useCreateGroup = () => {
         const requestBody = groupCreateEndpoint({
             name: name.value,
             password: password.value,
-            userId: _id,
         })
         getData(requestBody)
     }

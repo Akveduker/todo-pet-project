@@ -14,23 +14,19 @@ export interface Group extends MongoValues {
 export interface GroupCreateDataReq {
     name: string;
     password: string;
-    userId: string;
 }
 
 export interface GroupDeleteDataReq {
-    userId: string;
     groupId: string;
 }
 
 export interface GroupConnectEndpoint {
     groupId: string;
     password: string;
-    userId: string;
 }
 
 export interface GroupPageEndpoint {
     groupId: string;
-    userId: string;
 }
 
 export interface CreateTaskGroupEndpoint {

@@ -9,13 +9,12 @@ import { VAL_SUCCESS } from "utils/constants/validationTypes/validationTypes"
 import { userSelector } from "utils/helpers/selectors/userSelector/userSelector"
 
 export const useDeleteGroup = (groupId: string) => {
-    const { _id, groups } = useAppSelector(userSelector)
+    const { groups } = useAppSelector(userSelector)
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
     const [data, sendReq] = useFetchData<void>()
 
     const requestBody = groupDeleteEndpoint({
-        userId: _id,
         groupId
     })
 
