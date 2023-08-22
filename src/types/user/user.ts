@@ -14,9 +14,7 @@ export interface UserColor {
 }
 export type UserStorage = Pick<User, 'email' | 'password'>
 
-export type UserDataReq = {
-    _id: string;
-} & Partial<User>
+export type UserDataReq = Partial<User>
 
 export type UserBaseInfo = Pick<User, '_id' | 'name' | 'userColor'>
 
