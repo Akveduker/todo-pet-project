@@ -4,16 +4,11 @@ import { TaskGroupListContext } from "context/TaskGroupListContext/TaskGroupList
 import { useAppContext } from "hooks/context/useAppContext"
 import { useFetchData } from "hooks/dataFetch/useFetchData"
 import { useEffect } from "react"
-import { useAppSelector } from "store/store"
 import { VAL_SUCCESS } from "utils/constants/validationTypes/validationTypes"
-import { userSelector } from "utils/helpers/selectors/userSelector/userSelector"
 
 export const useDeleteTaskGroup = (taskGroupId: string) => {
 
     const [{ groupId }] = useAppContext(GroupContext)
-
-
-    const { _id: userId } = useAppSelector(userSelector)
 
     const [data, getData] = useFetchData<void>()
 
@@ -24,7 +19,6 @@ export const useDeleteTaskGroup = (taskGroupId: string) => {
     const reqBody = deleteTaskGroupEndpoint({
         groupId,
         taskGroupId,
-        userId
     })
 
     const sendReq = () => getData(reqBody)

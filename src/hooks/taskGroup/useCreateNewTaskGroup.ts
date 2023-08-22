@@ -6,17 +6,13 @@ import { useFetchData } from "hooks/dataFetch/useFetchData"
 import { useCreateValidationState } from "hooks/inputValidation/useCreateValidationState/useCreateValidationState"
 import { useCreateUsersListState } from "hooks/usersList/useCreateUsersListState"
 import { useEffect } from "react"
-import { useAppSelector } from "store/store"
 import { TaskGroup } from "types/task/task"
 import { valObjectCreateNewTaskGroup } from "utils/constants/valObjects/valObjectCreateNewTaskGroup"
 import { VAL_SUCCESS } from "utils/constants/validationTypes/validationTypes"
 import { convertUsersListInContextList } from "utils/helpers/converters/convertUsersListInContextList/convertUsersListInContextList"
 import { dateConvert } from "utils/helpers/converters/dateConvert/dateConvert"
-import { userSelector } from "utils/helpers/selectors/userSelector/userSelector"
 
 export const useCreateNewTaskGroup = () => {
-
-    const creatorId = useAppSelector(userSelector)._id
 
     const [{ usersArray, groupId }] = useAppContext(GroupContext)
 
@@ -37,7 +33,6 @@ export const useCreateNewTaskGroup = () => {
             name: name.value,
             color: color.value,
             personsId: usersListState.state.filter(item => item.isIn).map(item => item._id),
-            creatorId,
             groupId,
             dates: dateConvert(date.value)
         })

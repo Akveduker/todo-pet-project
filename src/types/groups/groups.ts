@@ -35,13 +35,11 @@ export interface CreateTaskGroupEndpoint {
     personsId: string[];
     dates: TaskDate;
     groupId: string;
-    creatorId: string;
 }
 
 
 export interface DeleteTaskGroupEndpoint {
     groupId: string;
-    userId: string;
     taskGroupId: string;
 }
 
